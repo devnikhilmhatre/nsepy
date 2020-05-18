@@ -321,6 +321,7 @@ def get_price_list(dt, series='EQ'):
     3. ddMMMyyyy
     """
     res = price_list_url(yyyy, MMM, dt.strftime("%d%b%Y").upper())
+    print(res)
     txt = unzip_str(res.content)
     fp = six.StringIO(txt)
     df = pd.read_csv(fp)
